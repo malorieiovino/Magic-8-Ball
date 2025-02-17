@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 20px;
 }
 
@@ -35,9 +35,35 @@ button:hover {
     background-color: #ffaa00;
 }
 
+/* Magic 8-Ball Styling */
+.ball-container {
+    margin-top: 20px;
+}
+
+#magicBall {
+    width: 150px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Shaking animation */
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(5deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/* Response fade-in effect */
 #response {
     font-size: 24px;
     margin-top: 20px;
     font-weight: bold;
     color: #ffcc00;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
