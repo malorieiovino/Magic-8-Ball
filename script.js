@@ -27,17 +27,17 @@ function shakeBall() {
         return;
     }
 
-    // Start the shaking animation
-    magicBall.classList.add("shake");
+    // Start shaking and spinning the ball (without sound)
+    magicBall.classList.add("shake", "spin");
 
-    // Remove the previous response while shaking
+    // Fade-out the previous response
     responseDiv.style.opacity = "0";
 
-    // Stop shaking after 1 second and show the answer
+    // Stop shaking and spinning after 1.5 seconds and show the answer
     setTimeout(() => {
-        magicBall.classList.remove("shake");
+        magicBall.classList.remove("shake", "spin");
         let randomIndex = Math.floor(Math.random() * responses.length);
         responseDiv.innerHTML = "🎱 " + responses[randomIndex];
         responseDiv.style.opacity = "1";
-    }, 1000);
+    }, 1500); // Time for the shaking effect
 }
