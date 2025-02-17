@@ -67,3 +67,31 @@ button:hover {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
+#magicBall {
+    width: 150px;
+    transition: transform 0.5s ease-in-out;
+    animation: none;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out 1;
+}
+
+@keyframes shake {
+    0% { transform: rotate(10deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
