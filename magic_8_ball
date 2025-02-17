@@ -1,0 +1,30 @@
+import random
+
+def magic_8_ball():
+    responses = [
+        "Yes, definitely!",
+        "It is certain.",
+        "Without a doubt.",
+        "Reply hazy, try again.",
+        "Ask again later.",
+        "Cannot predict now.",
+        "Don't count on it.",
+        "My sources say no.",
+        "Very doubtful.",
+    ]
+
+    print("🎱 Welcome to the Magic 8-Ball!")
+    while True:
+        question = input("\nAsk me a Yes/No question (or type 'exit' to quit): ").strip()
+        if question.lower() == "exit":
+            print("Goodbye! 🔮")
+            break
+        if not question.endswith("?"):
+            print("Please ask a Yes/No question ending with '?'.")
+            continue
+
+        print(f"🎱 {random.choice(responses)}")
+
+# Run the Magic 8-Ball
+if __name__ == "__main__":
+    magic_8_ball()
